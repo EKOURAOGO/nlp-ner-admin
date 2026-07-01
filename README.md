@@ -79,6 +79,15 @@ Dataset annoté (JSON)
 
 ---
 
+
+## Lancer le dashboard Streamlit
+
+```bash
+streamlit run app.py
+```
+
+Le dashboard s'ouvre sur `http://localhost:8501`
+
 ## Installation & lancement
 
 ```bash
