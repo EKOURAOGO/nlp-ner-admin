@@ -184,7 +184,7 @@ with tab1:
         for metric, color in colors.items():
             fig.add_trace(go.Bar(name=metric, x=df_m["Entité"], y=df_m[metric],
                                  marker=dict(color=color, opacity=0.85, cornerradius=3)))
-        fig.update_layout(**LAYOUT, barmode="group", height=300,
+        apply_layout(fig, barmode="group", height=300,
                           yaxis=dict(range=[0,1.15], gridcolor="#1C1F28"),
                           title="F1 · Précision · Rappel", title_font_size=12,
                           title_font_color="#94A3B8",
