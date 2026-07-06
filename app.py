@@ -22,7 +22,8 @@ if str(_BASE) not in sys.path:
     sys.path.insert(0, str(_BASE))
 os.chdir(str(_BASE))
 
-from generate_training_data import generate_dataset, LABELS as ENTITY_LABELS
+from generate_training_data import generate_dataset
+ENTITY_LABELS = ["MONTANT", "ORGANISME", "DISPOSITIF", "DUREE", "ZONE_GEO"]
 from train_ner import split_dataset, train_ner_model
 from evaluate_ner import evaluate_on_test
 
