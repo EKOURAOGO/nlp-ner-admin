@@ -119,5 +119,5 @@ Sortie attendue : `17 passed`
 
 ## Auteur
 
-**Emmanuel KOURAOGO** — M2 IMSD · Paris-Saclay
+**Emmanuel KOURAOGO** 
 [GitHub](https://github.com/EKOURAOGO) · [Email](mailto:ekouraogo73@gmail.com)
