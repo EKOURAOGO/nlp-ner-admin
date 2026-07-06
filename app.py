@@ -5,6 +5,7 @@ Dashboard pro · Design inspiré Linear/Vercel
 
 import json
 import sys
+import os
 from pathlib import Path
 
 import pandas as pd
@@ -12,7 +13,15 @@ import plotly.graph_objects as go
 import streamlit as st
 import spacy
 
-sys.path.insert(0, str(Path(__file__).parent / "src"))
+# Robuste peu importe le répertoire de lancement
+_BASE = Path(__file__).resolve().parent
+_SRC  = _BASE / "src"
+if str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+if str(_BASE) not in sys.path:
+    sys.path.insert(0, str(_BASE))
+os.chdir(str(_BASE))
+
 from generate_training_data import generate_dataset, LABELS as ENTITY_LABELS
 from train_ner import split_dataset, train_ner_model
 from evaluate_ner import evaluate_on_test
