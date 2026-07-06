@@ -94,6 +94,19 @@ ENT_STYLES = {
     "ZONE_GEO":   {"bg":"#881337","fg":"#fda4af","border":"#f43f5e"},
 }
 LAYOUT = dict(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="#111318",
+               font=dict(family="Inter", color="#94A3B8", size=11),
+               margin=dict(t=32, b=12, l=12, r=12))
+
+def _ax():
+    return dict(gridcolor="#1C1F28", linecolor="#1C1F28")
+
+def apply_layout(fig, **kw):
+    kw.setdefault("xaxis", {})
+    kw.setdefault("yaxis", {})
+    kw["xaxis"] = dict(**_ax(), **kw["xaxis"])
+    kw["yaxis"] = dict(**_ax(), **kw["yaxis"])
+    apply_layout(fig, **kw)
+    return fig", plot_bgcolor="#111318",
               font=dict(family="Inter", color="#94A3B8", size=11),
               margin=dict(t=32, b=12, l=12, r=12),
               xaxis=dict(gridcolor="#1C1F28", linecolor="#1C1F28"),
@@ -263,7 +276,7 @@ with tab3:
     fig_l.add_trace(go.Scatter(x=df_h["iter"], y=df_h["loss"], mode="lines",
                                line=dict(color="#F59E0B", width=2),
                                fill="tozeroy", fillcolor="rgba(245,158,11,0.07)"))
-    fig_l.update_layout(**LAYOUT, height=280,
+    apply_layout(fig_l, height=280,
                         xaxis_title="Itération", yaxis_title="Loss NER",
                         title="Convergence NER", title_font_size=12,
                         title_font_color="#94A3B8")
