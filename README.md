@@ -1,4 +1,4 @@
-# NLP — NER sur Documents Administratifs (spaCy)
+# NLP - NER sur Documents Administratifs (spaCy)
 
 Pipeline complet d'entraînement d'un modèle de **Reconnaissance d'Entités Nommées (NER)** custom sur des textes administratifs français. Entraîné de zéro (`spacy blank("fr")`) sur 480 exemples annotés, évalué par F1-score par type d'entité, avec 17 tests unitaires couvrant la génération de données, l'entraînement et l'évaluation.
 
