@@ -62,6 +62,8 @@ ZONES_GEO = [
     "dans les QPV", "dans les zones blanches",
 ]
 
+LABELS = ["MONTANT", "ORGANISME", "DISPOSITIF", "DUREE", "ZONE_GEO"]
+
 # ── Gabarits de phrases avec placeholders ──────────────────────────────────
 
 TEMPLATES = [
