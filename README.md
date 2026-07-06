@@ -79,6 +79,31 @@ Dataset annoté (JSON)
 
 ---
 
+## 📊 Dashboard & Visualisations
+
+### Métriques de performance par type d'entité
+
+Le dashboard interactif affiche les performances du modèle NER avec plusieurs visualisations :
+
+<div align="center">
+
+**Vue générale : Statistiques & Visualisations des métriques**
+
+![Dashboard Metrics](docs/images/dashboard-metrics.png)
+
+*Métriques par type d'entité (F1, Précision, Rappel) + Radar chart*
+
+---
+
+**Courbe de convergence d'entraînement**
+
+![Convergence Curve](docs/images/convergence-curve.png)
+
+*Loss convergence au fur et à mesure des itérations (30 epochs)*
+
+</div>
+
+---
 
 ## Lancer le dashboard Streamlit
 
