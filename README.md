@@ -79,7 +79,7 @@ Dataset annoté (JSON)
 
 ---
 
-## 📊 Dashboard & Visualisations
+## Dashboard & Visualisations
 
 ### Métriques de performance par type d'entité
 
